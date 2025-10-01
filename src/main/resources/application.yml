@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-security-service
+
+  security:
+    user:
+      name: admin
+      password: admin
+
+logging:
+  level:
+    root: debug
+    com.zaxxer.hikari: error
+    org.apache : error
+
+
