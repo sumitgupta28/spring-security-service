@@ -20,10 +20,9 @@ public class TransactionController {
 
     @PostMapping
     @Operation(description = "Validate the Store the Transaction")
-    public ResponseEntity<TransactionResponse> processTransaction(@RequestBody TransactionRequest transactionRequest)
-    {
-            TransactionResponse transactionResponse =  TransactionResponse.builder().transactionId(transactionRequest.getTransactionId()).transactionStatus("APPROVED").build();
-            return  ResponseEntity.ok(transactionResponse);
+    public ResponseEntity<TransactionResponse> processTransaction(@RequestBody TransactionRequest transactionRequest) {
+        TransactionResponse transactionResponse = TransactionResponse.builder().transactionId(transactionRequest.getTransactionId()).transactionStatus("APPROVED").build();
+        return ResponseEntity.ok(transactionResponse);
     }
 
 }
