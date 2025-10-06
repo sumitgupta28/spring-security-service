@@ -33,6 +33,8 @@ spring:
     locations: classpath:flyway/migration # Location of migration scripts
     baseline-on-migrate: true
 
+
+
 logging:
   level:
     root: info
@@ -43,3 +45,10 @@ logging:
     org.springframework.security: debug
 
 # curl -u "admin:admin" http://localhost:8080/transaction/health
+
+
+### JWT
+## echo -n "TestAPIKey" | openssl dgst -sha256 -hmac "TestSecretKey"
+jwt:
+  secret: 5813367e8edbfbef20557e3ed31b3914f625aed772f251c55c1f3f7ff33c7585
+  expiration: 3600000
